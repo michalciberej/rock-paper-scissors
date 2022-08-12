@@ -1,0 +1,31 @@
+from random import randint
+
+t = ["Rock", "Paper", "Scissors"]
+computer = t[randint(0, 2)]
+#player = input("Rock, Paper or Scissors? ")
+player = True
+
+
+while player == True:
+    player = input("Rock, Paper, Scissors? ")
+    if player == computer:
+        print("Tie, you both used", computer)
+    elif player == "Rock":
+        if computer == "Paper":
+            print("You lose!", computer, "folds", player)
+        else:
+            print("You win!")
+    elif player == "Paper":
+        if computer == "Scissors":
+            print("You lose!", computer, "cut", player)
+        else:
+            print("You win!")
+    elif player == "Scissors":
+        if computer == "Rock":
+            print("You lose!", computer, "smashes", player)
+        else:
+            print("You win!")
+    else:
+        print("Wrong Input, double check your spelling! ")
+
+player = False
